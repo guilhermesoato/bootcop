@@ -1,0 +1,28 @@
+# Build and IDE
+target/
+*.class
+*.jar
+*.war
+*.ear
+.classpath
+.project
+.settings/
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+*.swp
+*.swo
+
+# Data files
+habit_tracker_data/
+*.json
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Maven
+.m2/
+dependency-reduced-pom.xml
