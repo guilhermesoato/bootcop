@@ -467,15 +467,7 @@ Sob a condição de incluir uma cópia da licença.
 
 **Seu Nome**
 - GitHub: [@guilhermesoato](https://github.com/guilhermesoato)
-- Email: seu.email@example.com
-
----
-
-## Suporte e Feedback
-
-- **Encontrou um bug?** Abra uma [Issue](https://github.com/guilhermesoato/bootcop/issues)
-- **Tem uma ideia de feature?** Inicie uma [Discussão](https://github.com/guilhermesoato/bootcop/discussions)
-- **Quer contribuir?** Veja a seção [Contribuindo](#contribuindo)
+- Email: guilhermesoato7@gmail.com
 
 ---
 
@@ -493,15 +485,3 @@ Este projeto demonstra:
 - Documentação profissional
 
 ---
-
-## Estatísticas do Projeto
-
-- **Total de Linhas de Código**: ~1500
-- **Cobertura de Testes**: 28 testes unitários
-- **Regras de Qualidade de Código**: 15+ verificações Checkstyle
-- **Reprodutibilidade de Construção**: 100% (Maven + GitHub Actions)
-- **Documentação**: README completo + Javadoc
-
----
-
-**Última Atualização:** Março 2026
