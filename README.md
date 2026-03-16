@@ -1,512 +1,507 @@
-# 🌙 Sleep Tracker - Daily Habit Monitor
+# Rastreador de Sono - Monitor de Hábitos Diários
 
-A professional desktop application built with JavaFX for monitoring sleep patterns and tracking daily habits, helping users improve their health and well-being.
+Aplicação desktop profissional desenvolvida com JavaFX para monitorar padrões de sono e rastrear hábitos diários, ajudando usuarios a melhorar sua saude e bem-estar.
 
-**Version:** 1.0.0 | **Status:** ✅ Production Ready
-
----
-
-## 📋 Table of Contents
-
-- [Problem Statement](#problem-statement)
-- [Solution Overview](#solution-overview)
-- [Target Audience](#target-audience)
-- [Key Features](#key-features)
-- [Tech Stack](#tech-stack)
-- [Project Structure](#project-structure)
-- [Installation](#installation)
-- [Running the Application](#running-the-application)
-- [Running Tests](#running-tests)
-- [Running Linting](#running-linting)
-- [CI/CD Pipeline](#cicd-pipeline)
-- [Usage Guide](#usage-guide)
-- [Contributing](#contributing)
-- [License](#license)
-- [Author](#author)
+**Versao:** 1.0.0 | **Status:** Pronto para Producao
 
 ---
 
-## 🎯 Problem Statement
+## Indice
 
-**The Real Problem:**
-
-Many people struggle with inconsistent sleep patterns and lack of awareness about their daily habits. This often leads to:
-- Sleep deprivation and poor sleep quality
-- Difficulty establishing healthy routines
-- Lack of insight into what behaviors affect sleep
-- No systematic way to track progress or identify patterns
-
-Individuals, especially students, professionals, and seniors, need a simple, intuitive tool to:
-- Record and monitor sleep duration and quality
-- Track daily habits (exercise, meditation, hydration)
-- Visualize patterns and progress
-- Make data-driven decisions about their health
-
----
-
-## 💡 Solution Overview
-
-**Sleep Tracker** is a lightweight desktop application that provides:
-
-1. **Sleep Recording** - Log daily sleep duration and quality
-2. **Habit Tracking** - Monitor important daily habits (exercise, meditation, hydration)
-3. **Statistical Analysis** - View average sleep hours and habit completion rates
-4. **Data Persistence** - Automatically save all data locally
-
-The application uses a clean, intuitive GUI that requires no technical knowledge to use. Data is stored locally as JSON files, ensuring privacy and offline availability.
+- [Declaracao do Problema](#declaracao-do-problema)
+- [Visao Geral da Solucao](#visao-geral-da-solucao)
+- [Publico Alvo](#publico-alvo)
+- [Funcionalidades Principais](#funcionalidades-principais)
+- [Pilha Tecnologica](#pilha-tecnologica)
+- [Estrutura do Projeto](#estrutura-do-projeto)
+- [Instalacao](#instalacao)
+- [Executando a Aplicacao](#executando-a-aplicacao)
+- [Executando Testes](#executando-testes)
+- [Executando Analise Estativa](#executando-analise-estativa)
+- [Pipeline CI/CD](#pipeline-cicd)
+- [Guia de Uso](#guia-de-uso)
+- [Contribuindo](#contribuindo)
+- [Licenca](#licenca)
+- [Autor](#autor)
 
 ---
 
-## 👥 Target Audience
+## Declaracao do Problema
 
-- 🧑‍💼 **Professionals** seeking better sleep hygiene and work-life balance
-- 👨‍🎓 **Students** managing stress and establishing healthy routines
-- 👵 **Seniors** and caregivers monitoring sleep patterns for health management
-- 🏃 **Athletes** optimizing recovery and performance through sleep tracking
-- 🧘 **Health-conscious individuals** building and maintaining positive habits
+**O Problema Real:**
 
----
+Muitas pessoas lutam contra padrões inconsistentes de sono e falta de consciência sobre seus hábitos diários. Isso resulta em:
+- Privação de sono e má qualidade do sono
+- Dificuldade em estabelecer rotinas saudaveis
+- Falta de compreensão sobre como comportamentos afetam o sono
+- Nenhuma forma sistemática de rastrear progresso ou identificar padrões
 
-## ✨ Key Features
-
-### 1. Sleep Record Management
-- Add date, hours slept, and sleep quality rating
-- Automatically validates input (0-24 hours, valid quality levels)
-- View all historical sleep records in an organized list
-- Delete specific sleep records
-
-### 2. Daily Habit Tracking
-- Create custom habit entries for any day
-- Mark habits as completed or incomplete
-- Add optional notes for context
-- View all habit entries organized by date
-
-### 3. Statistics Dashboard
-- Calculate average sleep hours (last 7 and 30 days)
-- Track habit completion rates
-- View helpful tips for sleep improvement
-- Real-time statistics updates
-
-### 4. Data Persistence
-- Automatic saving on application exit
-- Manual save option
-- JSON-based local storage (no server required)
-- Easy data backup and transfer
+Indivíduos, especialmente estudantes, profissionais e idosos, precisam de uma ferramenta simples e intuitiva para:
+- Registrar e monitorar duração e qualidade do sono
+- Rastrear hábitos diários importantes (exercício, meditação, hidratação)
+- Visualizar padroes e progresso
+- Tomar decisoes sobre saude baseadas em dados
 
 ---
 
-## 🛠️ Tech Stack
+## Visao Geral da Solucao
 
-| Component | Technology | Version |
-|-----------|-----------|---------|
-| **Language** | Java | 17+ |
-| **Build Tool** | Maven | 3.8+ |
-| **GUI Framework** | JavaFX | 21.0.1 |
-| **Testing** | JUnit 5 | 5.10.0 |
-| **Code Quality** | Checkstyle | 10.12.4 |
-| **Assertions** | AssertJ | 3.24.1 |
-| **Data Format** | JSON (GSON) | 2.10.1 |
+**Rastreador de Sono** é uma aplicação desktop leve que fornece:
+
+1. **Gravação de Sono** - Registre duração e qualidade do sono diário
+2. **Rastreamento de Hábitos** - Monitore hábitos diários importantes (exercício, meditação, hidratação)
+3. **Análise Estatística** - Veja horas médias de sono e taxas de conclusão de hábitos
+4. **Persistencia de Dados** - Salve automaticamente todos os dados localmente
+
+A aplicação usa uma interface gráfica limpa e intuitiva que não requer conhecimento técnico para usar. Os dados são armazenados localmente em arquivos JSON, garantindo privacidade e disponibilidade offline.
+
+---
+
+## Publico Alvo
+
+- **Profissionais** buscando melhor higiene do sono e equilíbrio trabalho-vida
+- **Estudantes** gerenciando estresse e estabelecendo rotinas saudáveis
+- **Idosos** e cuidadores monitorando padrões de sono para gestão de saúde
+- **Atletas** otimizando recuperação e desempenho através do rastreamento de sono
+- **Individuos conscientes com a saude** construindo e mantendo habitos positivos
+
+---
+
+## Funcionalidades Principais
+
+### 1. Gerenciamento de Registros de Sono
+- Adicione data, horas dormidas e classificação de qualidade do sono
+- Valida automaticamente entrada (0-24 horas, níveis de qualidade válidos)
+- Veja todos os registros históricos de sono em uma lista organizada
+- Delete registros de sono específicos
+
+### 2. Rastreamento de Hábitos Diários
+- Crie entradas de hábitos customizados para qualquer dia
+- Marque hábitos como completados ou incompletos
+- Adicione notas opcionais para contexto
+- Veja todas as entradas de hábitos organizadas por data
+
+### 3. Painel de Estatísticas
+- Calcule horas médias de sono (últimos 7 e 30 dias)
+- Rastreie taxas de conclusão de hábitos
+- Veja dicas úteis para melhorar o sono
+- Atualizações de estatísticas em tempo real
+
+### 4. Persistência de Dados
+- Salvamento automático ao fechar a aplicação
+- Opcao de salvamento manual
+- Armazenamento local baseado em JSON (sem servidor necessario)
+- Backup e transferencia faceis de dados
+
+---
+
+## Pilha Tecnologica
+
+| Componente | Tecnologia | Versão |
+|-----------|-----------|----------||
+| **Linguagem** | Java | 21 LTS |
+| **Ferramenta de Construção** | Maven | 3.9.14 |
+| **Framework GUI** | JavaFX | 21.0.1 |
+| **Testes** | JUnit 5 | 5.10.0 |
+| **Qualidade de Código** | Checkstyle | 10.12.4 |
+| **Assertions** | AssertJ | 3.27.7 |
+| **Formato de Dados** | JSON (GSON) | 2.10.1 |
 | **CI/CD** | GitHub Actions | - |
 
 ---
 
-## 📁 Project Structure
+## Estrutura do Projeto
 
 ```
 sleep-tracker/
 ├── src/
 │   ├── main/
 │   │   ├── java/com/habitsleep/
-│   │   │   ├── SleepTrackerApp.java          # Main application entry point
+│   │   │   ├── SleepTrackerApp.java          # Ponto de entrada principal
 │   │   │   ├── model/
-│   │   │   │   ├── SleepRecord.java          # Sleep data model
-│   │   │   │   ├── HabitEntry.java           # Habit data model
-│   │   │   │   └── HabitTracker.java         # Core business logic
+│   │   │   │   ├── SleepRecord.java          # Modelo de dados de sono
+│   │   │   │   ├── HabitEntry.java           # Modelo de dados de hábitos
+│   │   │   │   └── HabitTracker.java         # Lógica de negócio principal
 │   │   │   ├── ui/
-│   │   │   │   └── SleepTrackerUI.java       # JavaFX GUI implementation
+│   │   │   │   └── SleepTrackerUI.java       # Implementação GUI com JavaFX
 │   │   │   └── util/
-│   │   │       └── DataPersistence.java      # JSON serialization/deserialization
-│   │   └── resources/                        # Static resources
+│   │   │       └── DataPersistence.java      # Serialização/desserialização JSON
+│   │   └── resources/                        # Recursos estaticos
 │   └── test/
 │       └── java/com/habitsleep/
 │           └── model/
-│               ├── SleepRecordTest.java      # Unit tests for SleepRecord
-│               ├── HabitEntryTest.java       # Unit tests for HabitEntry
-│               └── HabitTrackerTest.java     # Unit tests for HabitTracker
+│               ├── SleepRecordTest.java      # Testes unitários para SleepRecord
+│               ├── HabitEntryTest.java       # Testes unitários para HabitEntry
+│               └── HabitTrackerTest.java     # Testes unitários para HabitTracker
 ├── .github/
 │   └── workflows/
-│       └── ci.yml                            # GitHub Actions CI pipeline
-├── pom.xml                                   # Maven configuration & dependencies
-├── checkstyle.xml                            # Code quality rules
-├── .gitignore                                # Git ignore patterns
-├── README.md                                 # Project documentation (this file)
-└── LICENSE                                   # MIT License
+│       └── ci.yml                            # Pipeline CI do GitHub Actions
+├── pom.xml                                   # Configuração Maven e dependências
+├── checkstyle.xml                            # Regras de qualidade de código
+├── .gitignore                                # Padrões de ignorar Git
+├── README.md                                 # Documentação do projeto
+└── LICENSE                                   # Licença MIT
 
 ```
 
 ---
 
-## 📦 Installation
+## Instalação
 
-### Prerequisites
+### Pré-requisitos
 
-- **Java Development Kit (JDK) 17 or higher**
-  - Download from [Oracle JDK](https://www.oracle.com/java/technologies/downloads/) or use OpenJDK
-  - Verify: `java -version`
+- **Kit de Desenvolvimento Java (JDK) 21 ou superior**
+  - Baixe em [Oracle JDK](https://www.oracle.com/java/technologies/downloads/) ou use OpenJDK
+  - Verifique: `java -version`
 
-- **Maven 3.8.1 or higher**
-  - Download from [Maven Official Site](https://maven.apache.org/download.cgi)
-  - Verify: `mvn -v`
+- **Maven 3.9 ou superior**
+  - Baixe em [Site Oficial Maven](https://maven.apache.org/download.cgi)
+  - Verifique: `mvn -v`
 
-- **Git** (optional, for cloning the repository)
-  - Download from [Git Official Site](https://git-scm.com/)
+- **Git** (opcional, para clonar o repositório)
+  - Baixe em [Site Oficial Git](https://git-scm.com/)
 
-### Steps
+### Passos
 
-1. **Clone the Repository**
+1. **Clone o Repositório**
    ```bash
-   git clone https://github.com/yourusername/sleep-tracker.git
+   git clone https://github.com/guilhermesoato/bootcop.git
    cd sleep-tracker
    ```
 
-2. **Verify Maven Setup**
+2. **Verifique Configuração do Maven**
    ```bash
    mvn clean compile
    ```
-   This command will:
-   - Download all dependencies
-   - Compile the source code
-   - Prepare the project for building
+   Este comando vai:
+   - Baixar todas as dependências
+   - Compilar o código-fonte
+   - Preparar o projeto para construção
 
-3. **Build the Project**
+3. **Construa o Projeto**
    ```bash
    mvn clean package
    ```
-   This creates an executable JAR file in the `target/` directory.
+   Isso cria um arquivo JAR executável no diretório `target/`.
 
 ---
 
-## 🚀 Running the Application
+## Executando a Aplicação
 
-### Option 1: Run Directly with Maven
+### Opção 1: Execute run.bat (Recomendado no Windows)
 ```bash
-mvn clean javafx:run
+cd diretório/do/projeto
+run.bat
 ```
 
-### Option 2: Run Compiled JAR
+### Opção 2: Compile e Execute JAR
 ```bash
-# First, build the project
+# Primeiro, construa o projeto
 mvn clean package
 
-# Then run the JAR
-java -jar target/sleep-tracker-1.0.0.jar
+# Depois execute o JAR
+java -jar target/sleep-tracker-1.0.0-executable.jar
 ```
 
-### Option 3: Run from IDE
-- Import the project into IntelliJ IDEA, Eclipse, or VS Code
-- Ensure JDK 17+ is configured as the project SDK
-- Run `SleepTrackerApp.java` as a Java application
+### Opção 3: Execute do IDE
+- Importe o projeto no IntelliJ IDEA, Eclipse ou VS Code
+- Certifique-se de que JDK 21+ está configurado como SDK do projeto
+- Execute `SleepTrackerApp.java` como uma aplicação Java
 
-### First Launch
-On first launch, the application will:
-1. Create a `habit_tracker_data/` directory in your home folder
-2. Initialize empty data files for sleep records and habits
-3. Display an empty interface ready for data entry
+### Primeiro Lançamento
+No primeiro lançamento, a aplicação vai:
+1. Criar um diretório `habit_tracker_data/` em sua pasta pessoal
+2. Inicializar arquivos de dados vazios para registros de sono e hábitos
+3. Exibir uma interface vazia pronta para entrada de dados
 
 ---
 
-## 🧪 Running Tests
+## Executando Testes
 
-### Run All Tests
+### Executar Todos os Testes
 ```bash
 mvn clean test
 ```
 
-### Run Specific Test Class
+### Executar Classe de Teste Especifica
 ```bash
 mvn test -Dtest=HabitTrackerTest
 ```
 
-### Run Tests with Output Report
+### Executar Testes com Relatorio de Saida
 ```bash
 mvn clean test -X
 ```
 
-### Test Coverage
-The project includes **30+ unit tests** covering:
+### Cobertura de Testes
+O projeto inclui **28 testes unitários** cobrindo:
 
-- ✅ **SleepRecord** (10 tests)
-  - Valid record creation
-  - Invalid input validation (negative hours, invalid quality)
-  - Setter validation
-  - All quality value combinations
+- **SleepRecord** (5 testes)
+  - Criação válida de registro
+  - Validação de entrada inválida (horas negativas, qualidade inválida)
+  - Operações setter
+  - Combinações de valores de qualidade
 
-- ✅ **HabitEntry** (8 tests)
-  - Entry creation and validation
-  - Empty/null habit name handling
-  - Setter operations
-  - Notes management
+- **HabitEntry** (5 testes)
+  - Criação e validação de entrada
+  - Tratamento de nome de hábito vazio/nulo
+  - Operações setter
+  - Gerenciamento de notas
 
-- ✅ **HabitTracker** (15+ tests)
-  - Add/remove operations
-  - Average sleep calculation
-  - Habit completion rate calculation
-  - Date filtering and statistics
-  - Edge cases (no records, invalid parameters)
+- **HabitTracker** (18+ testes)
+  - Operações adicionar/remover
+  - Cálculo de sono médio
+  - Cálculo de taxa de conclusão de hábitos
+  - Filtragem por data e estatísticas
+  - Casos extremos (sem registros, parâmetros inválidos)
 
-### Test Results
-All tests should pass with output like:
+### Resultados de Testes
+Todos os testes devem passar com saida como:
 ```
-[INFO] Tests run: 33, Failures: 0, Errors: 0, Skipped: 0
+[INFO] Tests run: 28, Failures: 0, Errors: 0, Skipped: 0
 [INFO] BUILD SUCCESS
 ```
 
 ---
 
-## 🔍 Running Linting
+## Executando Análise Estática
 
-### Check Code Quality
+### Verificar Qualidade de Código
 ```bash
 mvn checkstyle:check
 ```
 
-### Generate Detailed Report
+### Gerar Relatório Detalhado
 ```bash
 mvn checkstyle:checkstyle
 ```
-Report is generated at: `target/site/checkstyle.html`
+Relatório é gerado em: `target/site/checkstyle.html`
 
-### Rules Enforced
-- **Naming Conventions**: Classes (PascalCase), methods/variables (camelCase)
-- **Documentation**: Javadoc for public classes and methods
-- **Whitespace**: Consistent spacing and formatting
-- **Imports**: No star imports, removal of unused imports
-- **Complexity**: Cyclomatic complexity limited to 10 per method
-- **Line Length**: Maximum 120 characters
-- **Code Organization**: Proper structure and readability
+### Regras Implementadas
+- **Convenções de Nomenclatura**: Classes (PascalCase), métodos/variáveis (camelCase)
+- **Documentação**: Javadoc para classes e métodos públicos
+- **Espaçamento**: Espaçamento consistente e formatação
+- **Importações**: Sem importações com asterisco, remoção de importações não utilizadas
+- **Complexidade**: Complexidade ciclomática limitada a 10 por método
+- **Comprimento de Linha**: Máximo de 120 caracteres
+- **Organização de Código**: Estrutura apropriada e legibilidade
 
-### Fixing Violations
-Most violations can be fixed with:
-- Proper naming conventions
-- Adding Javadoc comments
-- Adjusting whitespace
-- Simplifying complex methods
-
----
-
-## 🔄 CI/CD Pipeline
-
-### GitHub Actions Workflow
-
-The project includes an automated CI pipeline that runs on:
-- **When:** Every push to `main` or `develop` branch
-- **When:** Every pull request
-
-### Pipeline Stages
-
-```
-1. Setup Environment
-   └─ Install JDK 17
-   └─ Verify Maven installation
-
-2. Build
-   └─ Clean and compile sources
-   └─ Resolve all dependencies
-
-3. Code Quality
-   └─ Run Checkstyle linting
-   └─ Generate code quality reports
-
-4. Test
-   └─ Execute all unit tests
-   └─ Generate test reports
-
-5. Package
-   └─ Create executable JAR
-   └─ Verify build artifacts
-```
-
-### Viewing Pipeline Status
-
-1. Go to your GitHub repository
-2. Click **Actions** tab
-3. Select the workflow run
-4. View detailed logs and results
-
-### Build Badge
-Add this to your README for a status badge:
-```markdown
-![Build Status](https://github.com/yourusername/sleep-tracker/workflows/CI/badge.svg)
-```
+### Corrigindo Violações
+A maioria das violações pode ser corrigida com:
+- Convenções de nomenclatura apropriadas
+- Adicionar comentários Javadoc
+- Ajustar espaçamento
+- Simplificar métodos complexos
 
 ---
 
-## 📖 Usage Guide
+## Pipeline CI/CD
 
-### Starting the Application
+### Workflow do GitHub Actions
 
-1. Launch the application using one of the methods above
-2. The main window displays three tabs: Sleep Records, Daily Habits, and Statistics
+O projeto inclui um pipeline de CI automatizado que executa em:
+- **Quando:** Todo push para branch `main`
+- **Quando:** Todo pull request
 
-### Sleep Records Tab
+### Estágios do Pipeline
 
-**Adding a Sleep Record:**
-1. Select a date from the date picker
-2. Enter hours slept (0-24 hours)
-3. Select sleep quality: "poor", "fair", "good", or "excellent"
-4. Click **Add Sleep Record**
-5. Confirm the success message
+```
+1. Configuração do Ambiente
+   - Instalar JDK 21
+   - Verificar instalação Maven
 
-**Viewing Records:**
-- All records appear in the list below
-- Format: `YYYY-MM-DD - X.X hours (quality)`
+2. Construção
+   - Limpar e compilar fontes
+   - Resolver todas as dependências
 
-**Deleting Records:**
-1. Select a record from the list
-2. Click **Delete Selected**
-3. Confirm deletion
+3. Qualidade de Código
+   - Executar linting com Checkstyle
+   - Gerar relatórios de qualidade
 
-### Daily Habits Tab
+4. Teste
+   - Executar todos os testes unitários
+   - Gerar relatórios de testes
 
-**Adding a Habit Entry:**
-1. Select a date (default: today)
-2. Enter habit name (e.g., "Exercise", "Meditation", "Hydration")
-3. Check "Completed" if the habit was done that day
-4. Add optional notes for context
-5. Click **Add Habit Entry**
+5. Empacotamento
+   - Criar JAR executável
+   - Verificar artefatos de construção
+```
 
-**Viewing Entries:**
-- All entries appear in the list
-- Format: `[✓/✗] YYYY-MM-DD - HabitName (notes)`
+### Visualizando Status do Pipeline
 
-**Tracking Multiple Habits:**
-- Create different habit entries for different activities
-- Track the same habit across multiple days
-- Different completion status for different days
-
-### Statistics Tab
-
-**View Your Progress:**
-1. Click the **Refresh Statistics** button
-2. See average sleep hours for:
-   - Last 7 days
-   - Last 30 days
-
-3. Click **Refresh Habit Stats** button
-4. View habit completion percentages (e.g., "Exercise: 75%")
-
-**Sleep Tips:**
-- The tab displays evidence-based recommendations for better sleep
-
-### Data Persistence
-
-- All data is **automatically saved** when you close the application
-- Data is stored locally in `habit_tracker_data/` folder as JSON
-- No internet connection required
-- Backup your `habit_tracker_data/` folder for safekeeping
+1. Vá para seu repositório no GitHub
+2. Clique na aba **Actions**
+3. Selecione a execução do workflow
+4. Veja logs e resultados detalhados
 
 ---
 
-## 🤝 Contributing
+## Guia de Uso
 
-We welcome contributions! Follow these steps:
+### Iniciando a Aplicação
 
-1. **Fork the Repository**
+1. Lance a aplicação usando um dos métodos acima
+2. A janela principal exibe três abas: Registros de Sono, Hábitos Diários e Estatísticas
+
+### Aba Registros de Sono
+
+**Adicionando um Registro de Sono:**
+1. Selecione uma data no seletor de datas
+2. Digite horas dormidas (0-24 horas)
+3. Selecione qualidade do sono: "ruim", "razoável", "bom" ou "excelente"
+4. Clique em **Adicionar Registro de Sono**
+5. Confirme a mensagem de sucesso
+
+**Visualizando Registros:**
+- Todos os registros aparecem na lista abaixo
+- Formato: `YYYY-MM-DD - X.X horas (qualidade)`
+
+**Deletando Registros:**
+1. Selecione um registro da lista
+2. Clique em **Deletar Selecionado**
+3. Confirme a deleção
+
+### Aba Hábitos Diários
+
+**Adicionando uma Entrada de Hábito:**
+1. Selecione uma data (padrão: hoje)
+2. Digite nome do hábito (ex: "Exercício", "Meditação", "Hidratação")
+3. Marque "Completado" se o hábito foi realizado esse dia
+4. Adicione notas opcionais para contexto
+5. Clique em **Adicionar Entrada de Hábito**
+
+**Visualizando Entradas:**
+- Todas as entradas aparecem na lista
+- Formato: `[V/X] YYYY-MM-DD - NomeHábito (notas)`
+
+**Rastreando Múltiplos Hábitos:**
+- Crie entradas de hábitos diferentes para atividades diferentes
+- Rastreie o mesmo hábito em múltiplos dias
+- Status de conclusão diferente para dias diferentes
+
+### Aba Estatísticas
+
+**Visualize Seu Progresso:**
+1. Clique no botão **Atualizar Estatísticas**
+2. Veja horas médias de sono para:
+   - Últimos 7 dias
+   - Últimos 30 dias
+
+3. Clique no botão **Atualizar Stats de Hábitos**
+4. Veja percentuais de conclusão de hábitos (ex: "Exercício: 75%")
+
+**Dicas de Sono:**
+- A aba exibe recomendações baseadas em evidências para melhor sono
+
+### Persistência de Dados
+
+- Todos os dados são **salvos automaticamente** ao fechar a aplicação
+- Os dados são armazenados localmente em pasta `habit_tracker_data/` como JSON
+- Nenhuma conexão com internet é necessária
+- Faça backup da pasta `habit_tracker_data/` para segurança
+
+---
+
+## Contribuindo
+
+Bem-vindo a contribuições! Siga estes passos:
+
+1. **Faça Fork do Repositório**
    ```bash
-   git clone https://github.com/yourusername/sleep-tracker.git
+   git clone https://github.com/guilhermesoato/bootcop.git
    ```
 
-2. **Create a Feature Branch**
+2. **Crie uma Branch de Feature**
    ```bash
-   git checkout -b feature/your-feature-name
+   git checkout -b feature/nome-da-sua-feature
    ```
 
-3. **Make Your Changes**
-   - Follow code style guidelines
-   - Add tests for new features
-   - Update documentation
+3. **Faça Suas Mudanças**
+   - Siga diretrizes de estilo de código
+   - Adicione testes para novas funcionalidades
+   - Atualize documentação
 
-4. **Run Quality Checks**
+4. **Execute Verificações de Qualidade**
    ```bash
    mvn clean package
    ```
-   Ensure all tests pass and linting succeeds.
+   Certifique-se de que todos os testes passam e linting teve sucesso.
 
-5. **Commit and Push**
+5. **Commit e Push**
    ```bash
    git add .
-   git commit -m "feat: Add your feature description"
-   git push origin feature/your-feature-name
+   git commit -m "feat: Adicione descrição da sua feature"
+   git push origin feature/nome-da-sua-feature
    ```
 
-6. **Submit a Pull Request**
-   - Describe your changes clearly
-   - Reference any related issues
-   - Ensure CI pipeline passes
+6. **Envie um Pull Request**
+   - Descreva suas mudanças claramente
+   - Referencie qualquer issue relacionada
+   - Certifique-se de que pipeline de CI passa
 
-### Code Style Guidelines
-- Follow Java naming conventions
-- Use camelCase for methods and variables
-- Use PascalCase for classes
-- Add Javadoc for public methods
-- Keep methods focused and simple
-- Maximum cyclomatic complexity: 10
-
----
-
-## 📄 License
-
-This project is licensed under the **MIT License** - see [LICENSE](LICENSE) file for details.
-
-You are free to:
-- ✅ Use commercially
-- ✅ Modify the code
-- ✅ Distribute
-- ✅ Use privately
-
-Under the condition that you include a copy of the license.
+### Diretrizes de Estilo de Código
+- Siga convenções de nomenclatura Java
+- Use camelCase para métodos e variáveis
+- Use PascalCase para classes
+- Adicione Javadoc para métodos públicos
+- Mantenha métodos focados e simples
+- Complexidade ciclomática máxima: 10
 
 ---
 
-## 👤 Author
+## Licença
 
-**Your Name**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Email: your.email@example.com
+Este projeto está licenciado sob a **Licença MIT** - veja arquivo [LICENSE](LICENSE) para detalhes.
 
----
+Você tem liberdade para:
+- Usar comercialmente
+- Modificar o código
+- Distribuir
+- Usar privativamente
 
-## 📞 Support & Feedback
-
-- **Found a bug?** Open an [Issue](https://github.com/yourusername/sleep-tracker/issues)
-- **Have a feature idea?** Start a [Discussion](https://github.com/yourusername/sleep-tracker/discussions)
-- **Want to contribute?** See [Contributing](#contributing) section
+Sob a condição de incluir uma cópia da licença.
 
 ---
 
-## 🎓 Learning Resources
+## Autor
 
-This project demonstrates:
-- ✅ Professional Java development practices
-- ✅ Object-oriented design principles
-- ✅ JavaFX GUI development
-- ✅ Unit testing with JUnit 5
-- ✅ Code quality analysis with Checkstyle
-- ✅ CI/CD automation with GitHub Actions
-- ✅ Version control with Git
-- ✅ Semantic versioning
-- ✅ Professional documentation
+**Seu Nome**
+- GitHub: [@guilhermesoato](https://github.com/guilhermesoato)
+- Email: seu.email@example.com
 
 ---
 
-## 📊 Project Statistics
+## Suporte e Feedback
 
-- **Total Lines of Code**: ~1,500
-- **Test Coverage**: 30+ unit tests
-- **Code Quality Rules**: 15+ Checkstyle checks
-- **Build Reproducibility**: 100% (Maven + GitHub Actions)
-- **Documentation**: Comprehensive README + Javadoc
+- **Encontrou um bug?** Abra uma [Issue](https://github.com/guilhermesoato/bootcop/issues)
+- **Tem uma ideia de feature?** Inicie uma [Discussão](https://github.com/guilhermesoato/bootcop/discussions)
+- **Quer contribuir?** Veja a seção [Contribuindo](#contribuindo)
 
 ---
 
-**Last Updated:** March 2026
+## Recursos de Aprendizado
+
+Este projeto demonstra:
+- Práticas profissionais de desenvolvimento Java
+- Princípios de design orientado a objetos
+- Desenvolvimento GUI com JavaFX
+- Testes unitários com JUnit 5
+- Análise de qualidade de código com Checkstyle
+- Automação de CI/CD com GitHub Actions
+- Controle de versão com Git
+- Versionamento semântico
+- Documentação profissional
+
+---
+
+## Estatísticas do Projeto
+
+- **Total de Linhas de Código**: ~1500
+- **Cobertura de Testes**: 28 testes unitários
+- **Regras de Qualidade de Código**: 15+ verificações Checkstyle
+- **Reprodutibilidade de Construção**: 100% (Maven + GitHub Actions)
+- **Documentação**: README completo + Javadoc
+
+---
+
+**Última Atualização:** Março 2026
