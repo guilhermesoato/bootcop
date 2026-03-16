@@ -49,6 +49,6 @@ O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/), e
 
 Notas de Versão
 
-v1.0.0 representa a primeira versao estavel de producao do Rastreador de Sono com todos os recursos principais, testes completos e automacao de qualidade.
+v1.0.0 representa a primeira versão estável de produção do Rastreador de Sono com todos os recursos principais, testes completos e automação de qualidade.
 
-Para detalhes sobre upgrades tecnicos, consulte a documentacao do projeto README.md.
+Para detalhes sobre upgrades técnicos, consulte a documentação do projeto README.md.

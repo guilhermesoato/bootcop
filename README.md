@@ -1,69 +1,69 @@
 # Rastreador de Sono - Monitor de Hábitos Diários
 
-Aplicação desktop profissional desenvolvida com JavaFX para monitorar padrões de sono e rastrear hábitos diários, ajudando usuarios a melhorar sua saude e bem-estar.
+Aplicação desktop profissional desenvolvida com JavaFX para monitorar padrões de sono e rastrear hábitos diários, ajudando usuários a melhorar sua saúde e bem-estar.
 
-**Versao:** 1.0.0 | **Status:** Pronto para Producao
+**Versão:** 1.0.0 | **Status:** Pronto para Produção
 
 ---
 
-## Indice
+## Índice
 
-- [Declaracao do Problema](#declaracao-do-problema)
-- [Visao Geral da Solucao](#visao-geral-da-solucao)
-- [Publico Alvo](#publico-alvo)
+- [Declaração do Problema](#declaração-do-problema)
+- [Visão Geral da Solução](#visão-geral-da-solução)
+- [Público Alvo](#público-alvo)
 - [Funcionalidades Principais](#funcionalidades-principais)
-- [Pilha Tecnologica](#pilha-tecnologica)
+- [Pilha Tecnológica](#pilha-tecnológica)
 - [Estrutura do Projeto](#estrutura-do-projeto)
-- [Instalacao](#instalacao)
-- [Executando a Aplicacao](#executando-a-aplicacao)
+- [Instalação](#instalação)
+- [Executando a Aplicação](#executando-a-aplicação)
 - [Executando Testes](#executando-testes)
-- [Executando Analise Estativa](#executando-analise-estativa)
+- [Executando Análise Estática](#executando-análise-estática)
 - [Pipeline CI/CD](#pipeline-cicd)
 - [Guia de Uso](#guia-de-uso)
 - [Contribuindo](#contribuindo)
-- [Licenca](#licenca)
+- [Licença](#licença)
 - [Autor](#autor)
 
 ---
 
-## Declaracao do Problema
+## Declaração do Problema
 
 **O Problema Real:**
 
 Muitas pessoas lutam contra padrões inconsistentes de sono e falta de consciência sobre seus hábitos diários. Isso resulta em:
 - Privação de sono e má qualidade do sono
-- Dificuldade em estabelecer rotinas saudaveis
+- Dificuldade em estabelecer rotinas saudáveis
 - Falta de compreensão sobre como comportamentos afetam o sono
 - Nenhuma forma sistemática de rastrear progresso ou identificar padrões
 
 Indivíduos, especialmente estudantes, profissionais e idosos, precisam de uma ferramenta simples e intuitiva para:
 - Registrar e monitorar duração e qualidade do sono
 - Rastrear hábitos diários importantes (exercício, meditação, hidratação)
-- Visualizar padroes e progresso
-- Tomar decisoes sobre saude baseadas em dados
+- Visualizar padrões e progresso
+- Tomar decisões sobre saúde baseadas em dados
 
 ---
 
-## Visao Geral da Solucao
+## Visão Geral da Solução
 
 **Rastreador de Sono** é uma aplicação desktop leve que fornece:
 
 1. **Gravação de Sono** - Registre duração e qualidade do sono diário
 2. **Rastreamento de Hábitos** - Monitore hábitos diários importantes (exercício, meditação, hidratação)
 3. **Análise Estatística** - Veja horas médias de sono e taxas de conclusão de hábitos
-4. **Persistencia de Dados** - Salve automaticamente todos os dados localmente
+4. **Persistência de Dados** - Salve automaticamente todos os dados localmente
 
 A aplicação usa uma interface gráfica limpa e intuitiva que não requer conhecimento técnico para usar. Os dados são armazenados localmente em arquivos JSON, garantindo privacidade e disponibilidade offline.
 
 ---
 
-## Publico Alvo
+## Público Alvo
 
 - **Profissionais** buscando melhor higiene do sono e equilíbrio trabalho-vida
 - **Estudantes** gerenciando estresse e estabelecendo rotinas saudáveis
 - **Idosos** e cuidadores monitorando padrões de sono para gestão de saúde
 - **Atletas** otimizando recuperação e desempenho através do rastreamento de sono
-- **Individuos conscientes com a saude** construindo e mantendo habitos positivos
+- **Indivíduos conscientes com a saúde** construindo e mantendo hábitos positivos
 
 ---
 
@@ -126,7 +126,7 @@ sleep-tracker/
 │   │   │   │   └── SleepTrackerUI.java       # Implementação GUI com JavaFX
 │   │   │   └── util/
 │   │   │       └── DataPersistence.java      # Serialização/desserialização JSON
-│   │   └── resources/                        # Recursos estaticos
+│   │   └── resources/                        # Recursos estáticos
 │   └── test/
 │       └── java/com/habitsleep/
 │           └── model/
@@ -223,12 +223,12 @@ No primeiro lançamento, a aplicação vai:
 mvn clean test
 ```
 
-### Executar Classe de Teste Especifica
+### Executar Classe de Teste Específica
 ```bash
 mvn test -Dtest=HabitTrackerTest
 ```
 
-### Executar Testes com Relatorio de Saida
+### Executar Testes com Relatório de Saída
 ```bash
 mvn clean test -X
 ```
@@ -256,7 +256,7 @@ O projeto inclui **28 testes unitários** cobrindo:
   - Casos extremos (sem registros, parâmetros inválidos)
 
 ### Resultados de Testes
-Todos os testes devem passar com saida como:
+Todos os testes devem passar com saída como:
 ```
 [INFO] Tests run: 28, Failures: 0, Errors: 0, Skipped: 0
 [INFO] BUILD SUCCESS
