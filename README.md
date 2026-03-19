@@ -212,13 +212,9 @@ cd diretório/do/projeto
 run.bat
 ```
 
-### Opção 2: Compile e Execute JAR
+### Opção 2: Executar via Maven (recomendado)
 ```bash
-# Primeiro, construa o projeto
-mvn clean package
-
-# Depois execute o JAR
-java -jar target/sleep-tracker-1.0.0-executable.jar
+mvn clean javafx:run
 ```
 
 ### Opção 3: Execute do IDE
