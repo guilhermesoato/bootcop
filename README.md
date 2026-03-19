@@ -26,6 +26,24 @@ Aplicação desktop profissional desenvolvida com JavaFX para monitorar padrões
 
 ---
 
+## ⚠️ Aviso Importante - Local de Instalação
+
+**NÃO clone ou instale este projeto em pastas sincronizadas com:**
+- 📁 **OneDrive**
+- 🔵 **Google Drive**
+- ☁️ **Dropbox**
+- 💾 Qualquer outro serviço de sincronização em nuvem
+
+**Por quê?** Os serviços em nuvem podem interferir com:
+- Arquivos temporários do Maven e compilação
+- Arquivos de dados JSON
+- Operações do Git
+- Execução da aplicação JavaFX
+
+**Solução:** Clone o repositório em uma pasta local do seu computador (ex: `C:\dev`, `/home/user/projects`, `Desktop`, etc.)
+
+---
+
 ## Declaração do Problema
 
 **O Problema Real:**
@@ -465,7 +483,7 @@ Sob a condição de incluir uma cópia da licença.
 
 ## Autor
 
-**Seu Nome**
+**Guilherme Soato**
 - GitHub: [@guilhermesoato](https://github.com/guilhermesoato)
 - Email: guilhermesoato7@gmail.com
 
