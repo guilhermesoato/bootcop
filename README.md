@@ -184,7 +184,7 @@ sleep-tracker/
 1. **Clone o Repositório**
    ```bash
    git clone https://github.com/guilhermesoato/bootcop.git
-   cd sleep-tracker
+   cd bootcop
    ```
 
 2. **Verifique Configuração do Maven**
