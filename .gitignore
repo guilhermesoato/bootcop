@@ -1,28 +1,40 @@
-# Build and IDE
+# Build (Java/Maven)
 target/
+!.mvn/wrapper/maven-wrapper.jar
+hs_err_pid*
+replay_pid*
+
+# Java artifacts — o Maven controla tudo em target/
 *.class
-*.jar
-*.war
-*.ear
-.classpath
-.project
-.settings/
+
+# JARs gerados manualmente não precisam ser ignorados globalmente
+# Removido: *.jar
+
+# IDEs
+.vscode/
 .idea/
 *.iml
 *.iws
 *.ipr
-.vscode/
+.classpath
+.project
+.settings/
+
+# Swap/Temp files
 *.swp
 *.swo
 
-# Data files
+# Data files (da aplicação)
 habit_tracker_data/
 *.json
 
-# OS specific
+# OS-specific
 .DS_Store
 Thumbs.db
 
-# Maven
-.m2/
+# Maven (não ignore a pasta ~/.m2 — ela não pertence ao repositório)
 dependency-reduced-pom.xml
+
+# Logs da execução personalizada
+run_last.log
+``
